@@ -9,16 +9,20 @@
 </head>
 
 <body>
+
+
+
+
     <script>
-        const text = "23dn3ir30fd2eddd"
-        var replace = text.replace(/\b(23dn3ir30fd2e)\b/g, function() {
-            var star = "*";
-            var len = arguments[1].length;
-            while (--len)
-                star += "*";
-            return star;
-        });
-        console.log(replace);
+        const secret_text = "23dn3ir30fd2eddd"
+        vis = secret_text.slice(-3),
+            countNum = '';
+
+        for (var i = (secret_text.length) - 3; i > 0; i--) {
+            countNum += '*';
+        }
+
+        console.log(countNum + vis);
     </script>
 
 </body>
