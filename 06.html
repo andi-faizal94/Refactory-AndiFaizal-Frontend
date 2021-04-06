@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let value = "ghijklmnoqstuw" //missing p,r,v
+
+        // //find first missing character
+        // function findOdd(test) {
+        //     let abc = "abcdefghijklmnopqrstuvwxyz"
+        //     let sp = abc.indexOf(test[0])
+        //     for (let i = 0; i < test.length; i++) {
+        //         if (test[i] !== abc[sp + i]) {
+        //             console.log(abc[sp + i]);
+        //             //sp++; i--; //uncomment to find all missing character
+        //             break; // comment to find all missing character
+        //         }
+        //     }
+        // }
+
+        // console.log(findOdd(value))
+
+
+
+
+
+
+        // function fearNotLetter(str) {
+        //     var ch0 = str.charCodeAt(0),
+        //         ch;
+        //     str.split("").every(function(v, i) {
+        //         ch = String.fromCharCode(ch0 + i);
+        //         return ch === v;
+        //     });
+        //     return ch === str[str.length - 1] ? undefined : ch;
+        // }
+
+
+        // console.log(fearNotLetter(['c', 'd', 'f'])); // "h"
+
+
+
+
+        // var a = ["a", "b", "c", "e"],
+        //     count = a[a.length - 1];
+        // var missing = [];
+        // for (var i = 1; i <= count; i++) {
+        //     if (a.indexOf(i) == -1) {
+        //         missing.push(i);
+        //     }
+        // }
+        // console.log(missing.toString());
+
+        const list_letters = ["c", "d", "e", "f", "g", "h"]
+        const list_letters_first = ["c", "d", "e", "g", "h"]
+
+
+
+        console.log(
+            list_letters.filter(function(v) {
+                return !list_letters_first.includes(v);
+            })
+        )
+
+        console.log(
+            list_letters.filter(function(v) {
+                return list_letters_first.indexOf(v) == -1;
+            })
+        )
+
+
+        const list_letterss = ["X", "Y", "Z"]
+        const list_letters_second = ["X", "Z"]
+
+
+
+
+        console.log(
+            list_letterss.filter(function(v) {
+                return !list_letters_second.includes(v);
+            })
+        )
+
+        console.log(
+            list_letterss.filter(function(v) {
+                return list_letters_second.indexOf(v) == -1;
+            })
+        )
+    </script>
+</body>
+
+</html>
