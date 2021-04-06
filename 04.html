@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>jawaban</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <p id="demo"></p>
+    <script>
+        // even and odd
+        var text = "";
+        var i;
+        for (i = 1; i <= 1000; i++) {
+            if (i % 2 == 0) {
+                document.write(`${i} is even` + "<br>")
+            } else {
+                document.write(`${i} is odd` + "<br>")
+            }
+        }
+
+        <
+        !--number multiply by 5-- >
+
+
+
+
+
+
+
+
+
+
+        <
+        !--prime number-- >
+        function cekPrima(n) {
+            var max = Math.sqrt(n);
+            for (var i = 2; i <= max; i++) {
+                if (n % i == 0)
+                    return false;
+            }
+            return true;
+        }
+
+        for (var n = 1; n < 1000; n++) {
+            if (cekPrima(n)) {
+                document.write("prime number is" + " " + n + '<br>');
+            }
+        }
+
+        <
+        !--prime number less than 100-- >
+
+        function cekPrima(n) {
+            var max = Math.sqrt(n);
+            for (var i = 2; i <= max; i++) {
+                if (n % i == 0)
+                    return false;
+            }
+            return true;
+        }
+
+        for (var n = 1; n < 100; n++) {
+            if (cekPrima(n)) {
+                document.write("prime number is" + " " + n + '<br>');
+            }
+        }
+
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+
+</html>
