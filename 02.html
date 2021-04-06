@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var kalimat = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor";
+        var replace = kalimat.replace(/\b(dolor|elit)\b/g, function() {
+            var star = "*";
+            var len = arguments[1].length;
+            while (--len)
+                star += "*";
+            return star;
+        });
+        console.log(replace);
+        var x = "incididunt ut labore et dolore magna aliqua."
+        console.log(x)
+
+        var kalimat1 =
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu ex ea commodo consequat.";
+        var replace = kalimat1.replace(/\b(quis|nisi)\b/g, function() {
+            var star = "*";
+            var len = arguments[1].length;
+            while (--len)
+                star += "*";
+            return star;
+        });
+        console.log(replace);
+
+        var y = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum"
+        console.log(y)
+
+
+        var kalimat2 = "dolore eu fugiat nulla pariatur.";
+        var replace = kalimat2.replace(/\b(fugiat)\b/g, function() {
+            var star = "*";
+            var len = arguments[1].length;
+            while (--len)
+                star += "*";
+            return star;
+        });
+        console.log(replace);
+
+
+
+
+        var kalimat3 =
+            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+        var replace = kalimat3.replace(/\b(proident)\b/g, function() {
+            var star = "*";
+            var len = arguments[1].length;
+            while (--len)
+                star += "*";
+            return star;
+        });
+        console.log(replace);
+
+
+        var kalimat4 = "mollit anim id est laborum."
+        var replace = kalimat4.replace(/\b(laborum)\b/g, function() {
+            var star = "*";
+            var len = arguments[1].length;
+            while (--len)
+                star += "*";
+            return star;
+        });
+        console.log(replace);
+    </script>
+
+</body>
+
+</html>

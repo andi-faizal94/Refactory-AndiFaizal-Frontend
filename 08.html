@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const text = "23dn3ir30fd2eddd"
+        var replace = text.replace(/\b(23dn3ir30fd2e)\b/g, function() {
+            var star = "*";
+            var len = arguments[1].length;
+            while (--len)
+                star += "*";
+            return star;
+        });
+        console.log(replace);
+    </script>
+
+</body>
+
+</html>
