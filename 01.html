@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>javascript</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h2>membuat </h2>
+
+    <p>klik untuk sorting dari harga</p>
+
+    <button onclick="myFunction()">Sort</button>
+
+
+    <p id="demo"></p>
+
+
+    <script>
+        let barang = [{
+            name: "Xiaomi Redmi 5A",
+            price: 1199000,
+            category: "Smartphone"
+        }, {
+            name: "Macbook Air",
+            price: 13775000,
+            category: "Laptop"
+        }, {
+            name: "Samsung Galaxy J7",
+            price: 3549000,
+            category: "Smartphone"
+        }, {
+            name: "DELL XPS 13",
+            price: 26799000,
+            category: "Laptop"
+        }, {
+            name: "Xiaomi Mi 6",
+            price: 5399000,
+            category: "Smartphone"
+        }, {
+            name: "LG V30 Plus",
+            price: 10499000,
+            category: "Smartphone"
+        }, ];
+
+        displayBarang();
+
+        function myFunction() {
+            barang.sort(function(a, b) {
+                return a.price - b.price
+            });
+            displayBarang();
+        }
+
+        function displayBarang() {
+            document.getElementById("demo").innerHTML =
+                barang[0].name + " " + barang[0].price + " " + barang[0].category + "<br>" +
+                barang[1].name + " " + barang[1].price + " " + barang[1].category + "<br>" +
+                barang[2].name + " " + barang[2].price + " " + barang[2].category + "<br>" +
+                barang[3].name + " " + barang[3].price + " " + barang[3].category +
+                "<br>" +
+                barang[4].name + " " + barang[4].price + " " + barang[4].category +
+                "<br>" +
+                barang[5].name + " " + barang[5].price + " " + barang[5].category;
+        }
+
+        function convertToRupiah(price) {
+            var rupiah = '';
+            var price = price.toString().split('').reverse().join('');
+            for (var i = 0; i < price.length; i++)
+                if (i % 3 == 0) rupiah += price.substr(i, 3) + '.';
+            return 'Rp. ' + rupiah.split('', rupiah.length - 1).reverse().join('');
+        }
+
+
+        var myJSON = JSON.stringify(barang);
+        document.getElementById("demo").innerHTML = myJSON;
+    </script>
+</body>
+
+</html>
